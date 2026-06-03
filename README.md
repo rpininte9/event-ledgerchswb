@@ -2,6 +2,9 @@
 
 A distributed financial transaction processing system composed of two independently runnable Spring Boot microservices.
 
+<img width="704" height="384" alt="Application Overview" src="https://github.com/user-attachments/assets/67277215-ea45-493c-8f0e-0bcffb267c11" />
+
+
 ---
 
 ## Architecture Overview
@@ -263,3 +266,18 @@ curl -s -X POST http://localhost:8080/events \
   -H "Content-Type: application/json" \
   -d '{"eventId":"evt-001","accountId":"acct-123","type":"CREDIT","amount":500.00,"currency":"USD","eventTimestamp":"2026-05-10T10:00:00Z"}' | jq .
 ```
+## Results
+
+### Account Service – Startup
+<img width="952" height="110" alt="Account Service Front End" src="https://github.com/user-attachments/assets/cf0140d5-59df-4bc4-a3cf-963b20455130" />
+
+### Event Gateway Service – Startup
+<img width="954" height="100" alt="Event Gateway Service Front End" src="https://github.com/user-attachments/assets/da1de2a7-e5fd-4dbb-ab8a-5ea626d44bd6" />
+
+### Account Service – Integration Test Results
+<img width="924" height="152" alt="AccountControllerIntegrationTest Results" src="https://github.com/user-attachments/assets/6ca10640-6cca-4517-b47b-e963e256cb1d" />
+
+### Event Gateway Service – Integration Test Results
+<img width="938" height="153" alt="EventControllerIntegrationTest Results" src="https://github.com/user-attachments/assets/d24c9975-115e-47a3-8950-fa9afdc4cd87" />
+
+
