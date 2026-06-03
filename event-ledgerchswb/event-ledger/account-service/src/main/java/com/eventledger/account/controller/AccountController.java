@@ -45,7 +45,7 @@ public class AccountController {
         Map<String, Object> response = new LinkedHashMap<>();
         response.put("status", "UP");
         response.put("service", "account-service");
-        response.put("timestamp", Instant.now().toString());
+        response.put("timestamp", java.time.ZonedDateTime.now(java.time.ZoneId.systemDefault()).toString()); // Timestamp in local system timezone
         return ResponseEntity.ok(response);
     }
 }
